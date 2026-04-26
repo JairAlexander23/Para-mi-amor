@@ -1,0 +1,340 @@
+/* Reset básico para que nada se descuadre por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Elegí un fondo gris casi blanco para que el contenido resalte más y se vea limpio */
+    background-image: url("imagenes/fondo2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* --- HEADER PRINCIPAL --- */
+header {
+    /* Usamos el rojo representativo de Japón como color de marca */
+    background-color: #5b68f4;
+    color: white;
+    padding: 20px 0;
+}
+.menu-navegacion .texticos h2 {
+    /* Aplicamos la fuente al texto de la franja */
+    font-family: 'Playwrite DE SAS', cursive;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    max-width: 90%;
+    line-height: 1.6;
+}
+.info-header h1 {
+    font-family: "Alegreya", serif; /* Fuente nueva solo aquí */
+    font-weight: 800;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+/* --- MANTENEMOS LAS OTRAS SEGÚN TUS PETICIONES ANTERIORES --- */
+
+/* Texto de la franja rosa y títulos de cuadros */
+.menu-navegacion .texticos h2,
+.contenido-articulo .categoria {
+    font-family: "Playwrite DE SAS", cursive;
+}
+
+/* Títulos de los cuadros de fotos */
+.contenido-articulo .categoria {
+    font-family: "Playwrite DE SAS", cursive;
+}
+
+.contenedor-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Flex para poner el logo al lado de los textos del título */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 130px; 
+    height: 130px; /* Definimos altura igual al ancho para que sea un círculo perfecto */
+    margin-right: 30px;
+    
+    /* Aseguramos que se mantenga circular y bien centrada */
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.info-header h1 {
+    /* Noto Serif le da ese toque tradicional que buscamos */
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #000000; /* Un tono salmón suave para contrastar con el fondo rojo */
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+.menu-navegacion {
+    background-color: #fe79cf;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.texticos {
+    color: #F5F5F5;
+}
+
+.menu-navegacion ul {
+    list-style: none; /* Quitamos los puntos de la lista */
+}
+
+.menu-navegacion ul li {
+    display: inline-block; /* Elementos del menú en horizontal */
+    margin: 0 20px;
+}
+
+.menu-navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.menu-navegacion ul li a:hover {
+    color: #BC002D; /* El hover cambia al rojo de la marca */
+}
+
+/* --- SECCIÓN DE ARTÍCULOS --- */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.tarjeta-articulo {
+    background: white;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Importante para que el float no se salga del contenedor */
+}
+
+/* Diseño horizontal: imagen a un lado y texto al otro */
+.imagen-articulo {
+    width: 45%;
+    float: left;
+    padding: 20px; /* Esto hace que la imagen no quede en toda la esquina */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.imagen-articulo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    transition: all 0.4s ease;
+}
+.tarjeta-articulo:hover .imagen-articulo img {
+    border-radius: 30px; /* Bordes redondeados al pasar el cursor */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+/* Efecto para que toda la tarjeta parezca que se selecciona */
+.tarjeta-articulo:hover {
+    transform: translateY(-5px); /* Se mueve un poco hacia arriba */
+    transition: transform 0.3s ease;
+}
+
+.contenido-articulo {
+    width: 55%;
+    float: left;
+    padding: 40px;
+}
+.contenido-articulo .categoria, 
+.contenido-articulo h2, 
+.contenido-articulo h3 {
+    font-family: "Playwrite DE SAS", cursive; /* Aplica la fuente manuscrita */
+    font-size: 1.5rem; /* Ajusta el tamaño para que resalte */
+    color: #5d4037;    /* El color café oscuro que usas en tus títulos */
+    display: block;    /* Asegura que tome su propio espacio */
+    margin-bottom: 10px;
+}
+
+/* Bonus: Clase para que un artículo tenga la imagen a la derecha y el siguiente a la izquierda */
+.alternar .imagen-articulo {
+    float: right;
+}
+
+.alternar .contenido-articulo {
+    float: left;
+}
+
+.categoria {
+    color: #561900;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.tarjeta-articulo h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.fecha {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+/* Estilo de botón para los enlaces de "Leer más" */
+.contenido-articulo .grupo-botones {
+    display: flex;
+    justify-content: center; /* Esto centra los 3 corazones horizontalmente */
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible para centrar */
+}
+
+/* 2. Estilizamos solo los botones que están dentro de ese grupo específico */
+.grupo-botones .boton-corazon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;  /* Tamaño fijo para que sean simétricos */
+    height: 50px;
+    padding: 0;   /* Quitamos el padding heredado para centrar el corazón perfecto */
+    font-size: 20px;
+    border-radius: 8px; /* Bordes redondeados según el objetivo del parcial */
+    transition: all 0.3s ease;
+}
+
+/* 3. Efecto hover solo para estos botones */
+.grupo-botones .boton-corazon:hover {
+    transform: scale(1.1); /* Efecto de latido */
+    background-color: #fe79cf;
+    color: white;
+}
+
+.boton-leer {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 2px solid #fe79cf;
+    color: #fe79cf;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.boton-leer:hover {
+    background-color: #fe79cf;
+    color: white;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+    background-color: #5b68f4;
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.contenedor-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Flex para dividir el footer en 3 columnas iguales */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.info-footer,
+.enlaces-footer,
+.redes-sociales {
+    width: 30%;
+}
+
+.pie-pagina h3 {
+    font-family: 'Noto Serif JP', serif;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fe79cf;
+    display: inline-block;
+}
+
+.redes-footer {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;              
+    margin: 20px 0;         
+}
+
+.redes-footer img {
+    width: 30px;             
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-footer a:hover img {
+    transform: translateY(-5px);  
+    filter: brightness(1) invert(0); 
+}
+
+.enlaces-footer ul {
+    list-style: none;
+}
+
+.enlaces-footer ul li {
+    margin-bottom: 10px;
+}
+
+.enlaces-footer ul li a,
+.redes-sociales a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.enlaces-footer ul li a:hover,
+.redes-sociales a:hover {
+    color: white;
+}
+
+.redes-sociales .iconos-redes a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 20px solid #444; /* Línea sutil para separar el copyright */
+    font-size: 13px;
+    color: #ffffff;
+}
